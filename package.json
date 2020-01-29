@@ -1,0 +1,8 @@
+{
+  "name": "design-tokens",
+  "version": "0.0.1",
+  "main": "index.js",
+  "repository": "git@github.com:AirHelp/design-tokens.git",
+  "author": "AirHelp Developers <developers@airhelp.com>",
+  "license": "MIT"
+}
