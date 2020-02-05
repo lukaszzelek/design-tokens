@@ -1,0 +1,29 @@
+@import '../../styles/declarations';
+@import '../../styles/mixins';
+
+button {
+  &.primary {
+    @include button(primary, medium);
+    margin: 16px;
+  }
+
+  &.secondary {
+    @include button(secondary, medium);
+    margin: 16px;
+  }
+
+  &.tertiary {
+    @include button(tertiary, medium);
+    margin: 16px;
+  }
+
+  &.subtle {
+    @include button(subtle, medium);
+    margin: 16px;
+  }
+
+  &.danger {
+    @include button(danger, medium);
+    margin: 16px;
+  }
+}

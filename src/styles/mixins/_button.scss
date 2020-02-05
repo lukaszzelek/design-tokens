@@ -1,0 +1,149 @@
+@mixin button($style, $size) {
+  $backgrounds: (
+    primary: var(--color-primary-500),
+    secondary: var(--color-neutral-000),
+    tertiary: var(--color-neutral-000),
+    subtle: var(--color-neutral-000),
+    danger: var(--color-danger-500)
+  );
+
+  $backgrounds-hover: (
+    primary: var(--color-primary-600),
+    secondary: var(--color-neutral-100),
+    tertiary: var(--color-neutral-100),
+    subtle: var(--color-neutral-100),
+    danger: var(--color-danger-600)
+  );
+
+  $backgrounds-active: (
+    primary: var(--color-primary-700),
+    secondary: var(--color-neutral-200),
+    tertiary: var(--color-neutral-200),
+    subtle: var(--color-neutral-200),
+    danger: var(--color-danger-700)
+  );
+
+  $backgrounds-disabled: (
+    primary: var(--color-primary-300),
+    secondary: var(--color-neutral-200),
+    tertiary: var(--color-neutral-200),
+    subtle: var(--color-neutral-200),
+    danger: var(--color-neutral-200)
+  );
+
+  $colors: (
+    primary: var(--color-neutral-000),
+    secondary: var(--color-primary-500),
+    tertiary: var(--color-theme-600),
+    subtle: var(--color-theme-600),
+    danger: var(--color-neutral-200)
+  );
+
+  $colors-hover: (
+    primary: var(--color-neutral-000),
+    secondary: var(--color-primary-600),
+    tertiary: var(--color-theme-600),
+    subtle: var(--color-theme-600),
+    danger: var(--color-neutral-000)
+  );
+
+  $colors-active: (
+    primary: var(--color-neutral-000),
+    secondary: var(--color-primary-700),
+    tertiary: var(--color-theme-700),
+    subtle: var(--color-theme-700),
+    danger: var(--color-neutral-000)
+  );
+
+  $colors-disabled: (
+    primary: var(--color-neutral-000),
+    secondary: var(--color-theme-200),
+    tertiary: var(--color-theme-200),
+    subtle: var(--color-theme-200),
+    danger: var(--color-theme-100)
+  );
+
+  $borders: (
+    primary: none,
+    secondary: none,
+    tertiary: solid 1px var(--color-theme-300),
+    subtle: none,
+    danger: none
+  );
+
+  $borders-hover: (
+    primary: none,
+    secondary: none,
+    tertiary: solid 1px var(--color-theme-300),
+    subtle: none,
+    danger: none
+  );
+
+  $borders-active: (
+    primary: none,
+    secondary: none,
+    tertiary: solid 1px var(--color-theme-400),
+    subtle: none,
+    danger: none
+  );
+
+  $borders-disabled: (
+    primary: none,
+    secondary: none,
+    tertiary: solid 1px var(--color-theme-100),
+    subtle: none,
+    danger: solid 1px var(--color-theme-100),
+  );
+
+  $font-sizes: (
+    x-small: 14px,
+    small: 14px,
+    medium: 16px,
+    large: 18px,
+    x-large: 20px
+  );
+
+  $paddings: (
+    x-small: 9px 8px,
+    small: 13px 12px,
+    medium: 16px,
+    large: 19px 24px,
+    x-large: 26px 32px
+  );
+
+  color: #{map-get($colors, $style)};
+  background-color: #{map-get($backgrounds, $style)};
+
+  font-family: $font-family-main;
+  font-weight: $font-weight-semi-bold;
+  font-size: #{map-get($font-sizes, $size)};
+
+  border-radius: 3px;
+  border: #{map-get($borders, $style)};
+
+  padding: #{map-get($paddings, $size)};
+
+  line-height: 1;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:hover {
+    color: #{map-get($colors-hover, $style)};
+    background-color: #{map-get($backgrounds-hover, $style)};
+    border: #{map-get($borders-hover, $style)};
+  }
+
+  &:active {
+    color: #{map-get($colors-active, $style)};
+    background-color: #{map-get($backgrounds-active, $style)};
+    border: #{map-get($borders-active, $style)};
+  }
+
+  &:disabled {
+    color: #{map-get($colors-disabled, $style)};
+    background-color: #{map-get($backgrounds-disabled, $style)};
+    border: #{map-get($borders-disabled, $style)};
+  }
+}

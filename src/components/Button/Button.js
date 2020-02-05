@@ -1,8 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Button = ({ className, children }) => (
-  <button className={className}>
+import "./Button.scss";
+
+const Button = ({ className, children, ...props }) => (
+  <button className={className} {...props}>
     {children}
   </button>
 );
