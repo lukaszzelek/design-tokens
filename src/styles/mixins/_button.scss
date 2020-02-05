@@ -96,15 +96,15 @@
   );
 
   $font-sizes: (
-    x-small: 14px,
-    small: 14px,
-    medium: 16px,
-    large: 18px,
-    x-large: 20px
+    x-small: $font-size-xs,
+    small: $font-size-xs,
+    medium: $font-size-s,
+    large: $font-size-m,
+    x-large: 20px // ? not defined as a font-size
   );
 
   $paddings: (
-    x-small: 9px 8px,
+    x-small: 9px 8px, // all of these are very unregular
     small: 13px 12px,
     medium: 16px,
     large: 19px 24px,

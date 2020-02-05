@@ -22,3 +22,11 @@ export const Default = () => (
     <br />
   </>
 );
+
+export const withIcon = () => (
+  "To do"
+);
+
+export const iconOnly = () => (
+  "To do"
+);
