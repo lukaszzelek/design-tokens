@@ -1,72 +1,72 @@
 @mixin button($variant: 'primary') {
   $backgrounds: (
-    primary: var(--color-primary-500),
-    secondary: var(--color-neutral-000),
-    tertiary: var(--color-neutral-000),
-    subtle: var(--color-neutral-000),
-    danger: var(--color-danger-500)
+    primary: $color-primary-500,
+    secondary: $color-neutral-000,
+    tertiary: $color-neutral-000,
+    subtle: $color-neutral-000,
+    danger: $color-danger-500
   );
 
   $backgrounds-hover: (
-    primary: var(--color-primary-600),
-    secondary: var(--color-neutral-100),
-    tertiary: var(--color-neutral-100),
-    subtle: var(--color-neutral-100),
-    danger: var(--color-danger-600)
+    primary: $color-primary-600,
+    secondary: $color-neutral-100,
+    tertiary: $color-neutral-100,
+    subtle: $color-neutral-100,
+    danger: $color-danger-600
   );
 
   $backgrounds-active: (
-    primary: var(--color-primary-700),
-    secondary: var(--color-neutral-200),
-    tertiary: var(--color-neutral-200),
-    subtle: var(--color-neutral-200),
-    danger: var(--color-danger-700)
+    primary: $color-primary-700,
+    secondary: $color-neutral-200,
+    tertiary: $color-neutral-200,
+    subtle: $color-neutral-200,
+    danger: $color-danger-700
   );
 
   $backgrounds-disabled: (
-    primary: var(--color-primary-300),
-    secondary: var(--color-neutral-200),
-    tertiary: var(--color-neutral-200),
-    subtle: var(--color-neutral-200),
-    danger: var(--color-neutral-200)
+    primary: $color-primary-300,
+    secondary: $color-neutral-200,
+    tertiary: $color-neutral-200,
+    subtle: $color-neutral-200,
+    danger: $color-neutral-200
   );
 
   $colors: (
-    primary: var(--color-neutral-000),
-    secondary: var(--color-primary-500),
-    tertiary: var(--color-theme-600),
-    subtle: var(--color-theme-600),
-    danger: var(--color-neutral-200)
+    primary: $color-neutral-000,
+    secondary: $color-primary-500,
+    tertiary: $color-theme-600,
+    subtle: $color-theme-600,
+    danger: $color-neutral-200
   );
 
   $colors-hover: (
-    primary: var(--color-neutral-000),
-    secondary: var(--color-primary-600),
-    tertiary: var(--color-theme-600),
-    subtle: var(--color-theme-600),
-    danger: var(--color-neutral-000)
+    primary: $color-neutral-000,
+    secondary: $color-primary-600,
+    tertiary: $color-theme-600,
+    subtle: $color-theme-600,
+    danger: $color-neutral-000
   );
 
   $colors-active: (
-    primary: var(--color-neutral-000),
-    secondary: var(--color-primary-700),
-    tertiary: var(--color-theme-700),
-    subtle: var(--color-theme-700),
-    danger: var(--color-neutral-000)
+    primary: $color-neutral-000,
+    secondary: $color-primary-700,
+    tertiary: $color-theme-700,
+    subtle: $color-theme-700,
+    danger: $color-neutral-000
   );
 
   $colors-disabled: (
-    primary: var(--color-neutral-000),
-    secondary: var(--color-theme-200),
-    tertiary: var(--color-theme-200),
-    subtle: var(--color-theme-200),
-    danger: var(--color-theme-100)
+    primary: $color-neutral-000,
+    secondary: $color-theme-200,
+    tertiary: $color-theme-200,
+    subtle: $color-theme-200,
+    danger: $color-theme-100
   );
 
   $borders: (
     primary: none,
     secondary: none,
-    tertiary: solid 1px var(--color-theme-300),
+    tertiary: solid $border-width-s $color-theme-300,
     subtle: none,
     danger: none
   );
@@ -74,7 +74,7 @@
   $borders-hover: (
     primary: none,
     secondary: none,
-    tertiary: solid 1px var(--color-theme-300),
+    tertiary: solid $border-width-s $color-theme-300,
     subtle: none,
     danger: none
   );
@@ -82,7 +82,7 @@
   $borders-active: (
     primary: none,
     secondary: none,
-    tertiary: solid 1px var(--color-theme-400),
+    tertiary: solid $border-width-s $color-theme-400,
     subtle: none,
     danger: none
   );
@@ -90,9 +90,9 @@
   $borders-disabled: (
     primary: none,
     secondary: none,
-    tertiary: solid 1px var(--color-theme-100),
+    tertiary: solid $border-width-s $color-theme-100,
     subtle: none,
-    danger: solid 1px var(--color-theme-100),
+    danger: solid $border-width-s $color-theme-100,
   );
 
   color: #{map-get($colors, $variant)};
@@ -102,7 +102,7 @@
   font-weight: $font-weight-semi-bold;
   font-size: $font-size-s;
 
-  border-radius: 3px;
+  border-radius: $border-radius-s;
   border: #{map-get($borders, $variant)};
 
   height: $height-button-m;
