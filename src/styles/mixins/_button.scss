@@ -1,4 +1,4 @@
-@mixin button($style, $size) {
+@mixin button($variant: 'primary') {
   $backgrounds: (
     primary: var(--color-primary-500),
     secondary: var(--color-neutral-000),
@@ -95,33 +95,18 @@
     danger: solid 1px var(--color-theme-100),
   );
 
-  $font-sizes: (
-    x-small: $font-size-xs,
-    small: $font-size-xs,
-    medium: $font-size-s,
-    large: $font-size-m,
-    x-large: 20px // ? not defined as a font-size
-  );
-
-  $paddings: (
-    x-small: 9px 8px, // all of these are very unregular
-    small: 13px 12px,
-    medium: 16px,
-    large: 19px 24px,
-    x-large: 26px 32px
-  );
-
-  color: #{map-get($colors, $style)};
-  background-color: #{map-get($backgrounds, $style)};
+  color: #{map-get($colors, $variant)};
+  background-color: #{map-get($backgrounds, $variant)};
 
   font-family: $font-family-main;
   font-weight: $font-weight-semi-bold;
-  font-size: #{map-get($font-sizes, $size)};
+  font-size: $font-size-s;
 
   border-radius: 3px;
-  border: #{map-get($borders, $style)};
+  border: #{map-get($borders, $variant)};
 
-  padding: #{map-get($paddings, $size)};
+  height: $height-button-m;
+  padding: 0 $spacing-4x;
 
   line-height: $line-height-xs;
 
@@ -130,20 +115,50 @@
   }
 
   &:hover {
-    color: #{map-get($colors-hover, $style)};
-    background-color: #{map-get($backgrounds-hover, $style)};
-    border: #{map-get($borders-hover, $style)};
+    color: #{map-get($colors-hover, $variant)};
+    background-color: #{map-get($backgrounds-hover, $variant)};
+    border: #{map-get($borders-hover, $variant)};
   }
 
   &:active {
-    color: #{map-get($colors-active, $style)};
-    background-color: #{map-get($backgrounds-active, $style)};
-    border: #{map-get($borders-active, $style)};
+    color: #{map-get($colors-active, $variant)};
+    background-color: #{map-get($backgrounds-active, $variant)};
+    border: #{map-get($borders-active, $variant)};
   }
 
   &:disabled {
-    color: #{map-get($colors-disabled, $style)};
-    background-color: #{map-get($backgrounds-disabled, $style)};
-    border: #{map-get($borders-disabled, $style)};
+    color: #{map-get($colors-disabled, $variant)};
+    background-color: #{map-get($backgrounds-disabled, $variant)};
+    border: #{map-get($borders-disabled, $variant)};
   }
+}
+
+@mixin button-size($size: "medium") {
+  $font-sizes: (
+    x-small: $font-size-xs,
+    small: $font-size-xs,
+    medium: $font-size-s,
+    large: $font-size-m,
+    x-large: $font-size-button-xl
+  );
+
+  $heights: (
+    x-small: $height-button-xs,
+    small: $height-button-s,
+    medium: $height-button-m,
+    large: $height-button-l,
+    x-large: $height-button-xl,
+  );
+
+  $paddings: (
+    x-small: 0 $spacing-2x,
+    small: 0 $spacing-3x,
+    medium: 0 $spacing-4x,
+    large: 0 $spacing-6x,
+    x-large: 0 $spacing-8x,
+  );
+
+  font-size: #{map-get($font-sizes, $size)};
+  height: #{map-get($heights, $size)};
+  padding: #{map-get($paddings, $size)};
 }

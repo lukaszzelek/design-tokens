@@ -3,22 +3,37 @@ import Button from './Button';
 
 export default { title: 'Button' };
 
-export const Default = () => (
+export const Variants = () => (
   <>
-    <Button className="primary">Default Button</Button>
-    <Button className="primary" disabled>Disabled Button</Button>
+    <Button>Primary Button</Button>
+    <Button disabled>Primary Button Disabled</Button>
     <br />
-    <Button className="secondary">Default Button</Button>
-    <Button className="secondary" disabled>Disabled Button</Button>
+    <Button variant="secondary">Secondary Button</Button>
+    <Button variant="secondary" disabled>Secondary Button Disabled</Button>
     <br />
-    <Button className="tertiary">Default Button</Button>
-    <Button className="tertiary" disabled>Disabled Button</Button>
+    <Button variant="tertiary">Teriary Button</Button>
+    <Button variant="tertiary" disabled>Teriary Button Disabled</Button>
     <br />
-    <Button className="subtle">Default Button</Button>
-    <Button className="subtle" disabled>Disabled Button</Button>
+    <Button variant="subtle">Subtle Button</Button>
+    <Button variant="subtle" disabled>Subtle Button Disabled</Button>
     <br />
-    <Button className="danger">Default Button</Button>
-    <Button className="danger" disabled>Disabled Button</Button>
+    <Button variant="danger">Danger Button</Button>
+    <Button variant="danger" disabled>Danger Button Disabled</Button>
+    <br />
+  </>
+);
+
+export const sizes = () => (
+  <>
+    <Button size="x-small">X-small Button</Button>
+    <br />
+    <Button size="small">Small Button</Button>
+    <br />
+    <Button>Medium Button</Button>
+    <br />
+    <Button size="large">Large Button</Button>
+    <br />
+    <Button size="x-large">X-large Button</Button>
     <br />
   </>
 );
