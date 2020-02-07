@@ -11,8 +11,8 @@ export const Variants = () => (
     <Button variant="secondary">Secondary Button</Button>
     <Button variant="secondary" disabled>Secondary Button Disabled</Button>
     <br />
-    <Button variant="tertiary">Teriary Button</Button>
-    <Button variant="tertiary" disabled>Teriary Button Disabled</Button>
+    <Button variant="tertiary">Tertiary Button</Button>
+    <Button variant="tertiary" disabled>Tertiary Button Disabled</Button>
     <br />
     <Button variant="subtle">Subtle Button</Button>
     <Button variant="subtle" disabled>Subtle Button Disabled</Button>
