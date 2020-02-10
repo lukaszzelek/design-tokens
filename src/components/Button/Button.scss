@@ -1,0 +1,42 @@
+@import '../../styles/declarations';
+@import '../../styles/mixins';
+
+.btn {
+  margin: $spacing-4x;
+
+  &--primary {
+    @include button();
+  }
+
+  &--secondary {
+    @include button(secondary);
+  }
+
+  &--tertiary {
+    @include button(tertiary);
+  }
+
+  &--subtle {
+    @include button(subtle);
+  }
+
+  &--danger {
+    @include button(danger);
+  }
+
+  &--x-small {
+    @include button-size(x-small);
+  }
+
+  &--small {
+    @include button-size(small);
+  }
+
+  &--large {
+    @include button-size(large);
+  }
+
+  &--x-large {
+    @include button-size(x-large);
+  }
+}

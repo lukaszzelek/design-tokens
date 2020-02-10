@@ -4,5 +4,18 @@
   "main": "index.js",
   "repository": "git@github.com:AirHelp/design-tokens.git",
   "author": "AirHelp Developers <developers@airhelp.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "storybook": "start-storybook"
+  },
+  "dependencies": {
+    "@babel/core": "^7.8.4",
+    "@storybook/react": "^5.3.10",
+    "babel-loader": "^8.0.6",
+    "classnames": "^2.2.6",
+    "node-sass": "^4.13.1",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "sass-loader": "^8.0.2"
+  }
 }

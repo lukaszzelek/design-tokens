@@ -1,0 +1,164 @@
+@mixin button($variant: 'primary') {
+  $backgrounds: (
+    primary: $color-primary-500,
+    secondary: $color-neutral-000,
+    tertiary: $color-neutral-000,
+    subtle: $color-neutral-000,
+    danger: $color-danger-500
+  );
+
+  $backgrounds-hover: (
+    primary: $color-primary-600,
+    secondary: $color-neutral-100,
+    tertiary: $color-neutral-100,
+    subtle: $color-neutral-100,
+    danger: $color-danger-600
+  );
+
+  $backgrounds-active: (
+    primary: $color-primary-700,
+    secondary: $color-neutral-200,
+    tertiary: $color-neutral-200,
+    subtle: $color-neutral-200,
+    danger: $color-danger-700
+  );
+
+  $backgrounds-disabled: (
+    primary: $color-primary-300,
+    secondary: $color-neutral-200,
+    tertiary: $color-neutral-200,
+    subtle: $color-neutral-200,
+    danger: $color-neutral-200
+  );
+
+  $colors: (
+    primary: $color-neutral-000,
+    secondary: $color-primary-500,
+    tertiary: $color-theme-600,
+    subtle: $color-theme-600,
+    danger: $color-neutral-200
+  );
+
+  $colors-hover: (
+    primary: $color-neutral-000,
+    secondary: $color-primary-600,
+    tertiary: $color-theme-600,
+    subtle: $color-theme-600,
+    danger: $color-neutral-000
+  );
+
+  $colors-active: (
+    primary: $color-neutral-000,
+    secondary: $color-primary-700,
+    tertiary: $color-theme-700,
+    subtle: $color-theme-700,
+    danger: $color-neutral-000
+  );
+
+  $colors-disabled: (
+    primary: $color-neutral-000,
+    secondary: $color-theme-200,
+    tertiary: $color-theme-200,
+    subtle: $color-theme-200,
+    danger: $color-theme-100
+  );
+
+  $borders: (
+    primary: none,
+    secondary: none,
+    tertiary: solid $border-width-s $color-theme-300,
+    subtle: none,
+    danger: none
+  );
+
+  $borders-hover: (
+    primary: none,
+    secondary: none,
+    tertiary: solid $border-width-s $color-theme-300,
+    subtle: none,
+    danger: none
+  );
+
+  $borders-active: (
+    primary: none,
+    secondary: none,
+    tertiary: solid $border-width-s $color-theme-400,
+    subtle: none,
+    danger: none
+  );
+
+  $borders-disabled: (
+    primary: none,
+    secondary: none,
+    tertiary: solid $border-width-s $color-theme-100,
+    subtle: none,
+    danger: solid $border-width-s $color-theme-100,
+  );
+
+  color: #{map-get($colors, $variant)};
+  background-color: #{map-get($backgrounds, $variant)};
+
+  font-family: $font-family-main;
+  font-weight: $font-weight-semi-bold;
+  font-size: $font-size-s;
+
+  border-radius: $border-radius-s;
+  border: #{map-get($borders, $variant)};
+
+  height: $height-button-m;
+  padding: 0 $spacing-4x;
+
+  line-height: $line-height-xs;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:hover {
+    color: #{map-get($colors-hover, $variant)};
+    background-color: #{map-get($backgrounds-hover, $variant)};
+    border: #{map-get($borders-hover, $variant)};
+  }
+
+  &:active {
+    color: #{map-get($colors-active, $variant)};
+    background-color: #{map-get($backgrounds-active, $variant)};
+    border: #{map-get($borders-active, $variant)};
+  }
+
+  &:disabled {
+    color: #{map-get($colors-disabled, $variant)};
+    background-color: #{map-get($backgrounds-disabled, $variant)};
+    border: #{map-get($borders-disabled, $variant)};
+  }
+}
+
+@mixin button-size($size: "medium") {
+  $font-sizes: (
+    x-small: $font-size-xs,
+    small: $font-size-xs,
+    medium: $font-size-s,
+    large: $font-size-m,
+    x-large: $font-size-button-xl
+  );
+
+  $heights: (
+    x-small: $height-button-xs,
+    small: $height-button-s,
+    medium: $height-button-m,
+    large: $height-button-l,
+    x-large: $height-button-xl,
+  );
+
+  $paddings: (
+    x-small: 0 $spacing-2x,
+    small: 0 $spacing-3x,
+    medium: 0 $spacing-4x,
+    large: 0 $spacing-6x,
+    x-large: 0 $spacing-8x,
+  );
+
+  font-size: #{map-get($font-sizes, $size)};
+  height: #{map-get($heights, $size)};
+  padding: #{map-get($paddings, $size)};
+}
