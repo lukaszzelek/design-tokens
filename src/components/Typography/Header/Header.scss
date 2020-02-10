@@ -8,30 +8,30 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: $font-size-xxl;
-  line-height: $font-size-xxl;
+  line-height: $line-height-s;
 }
 
 h2 {
   font-size: $font-size-xl;
-  line-height: $font-size-xl;
+  line-height: $line-height-s;
 }
 
 h3 {
   font-size: $font-size-l;
-  line-height: $font-size-l;
+  line-height: $line-height-m;
 }
 
 h4 {
   font-size: $font-size-m;
-  line-height: $font-size-m;
+  line-height: $line-height-m;
 }
 
 h5 {
   font-size: $font-size-s;
-  line-height: $font-size-s;
+  line-height: $line-height-m;
 }
 
 h6 {
   font-size: $font-size-xs;
-  line-height: $font-size-xs;
+  line-height: $line-height-m;
 }
