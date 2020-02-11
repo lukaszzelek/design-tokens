@@ -140,6 +140,10 @@
     background-color: #{map-get($backgrounds-disabled, $variant)};
     border: #{map-get($borders-disabled, $variant)};
   }
+
+  svg {
+    height: $height-button-icon-m;
+  }
 }
 
 @mixin button-size($size: "medium") {
@@ -175,11 +179,23 @@
     x-large: $spacing-2x,
   );
 
+  $iconSizes: (
+    x-small: $height-button-icon-s,
+    small: $height-button-icon-s,
+    medium: $height-button-icon-m,
+    large: $height-button-icon-m,
+    x-large: $height-button-icon-l,
+  );
+
   font-size: #{map-get($font-sizes, $size)};
   height: #{map-get($heights, $size)};
   padding: #{map-get($paddings, $size)};
 
   & *:nth-child(2) {
     margin-left: #{map-get($iconSpacings, $size)};
+  }
+
+  svg {
+    height: #{map-get($iconSizes, $size)};
   }
 }

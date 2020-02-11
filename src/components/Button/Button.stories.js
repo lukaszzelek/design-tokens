@@ -38,40 +38,28 @@ export const sizes = () => (
   </>
 );
 
-const largeIcon = (
-  <svg width="24" height="24">
-    <rect rx="3" ry="3" width="24" height="24" fill="white"/>
-  </svg>
-);
-
-const mediumIcon = (
+const icon = (
   <svg width="20" height="20">
-    <rect rx="3" ry="3" width="20" height="20" fill="white"/>
-  </svg>
-);
-
-const smallIcon = (
-  <svg width="16" height="16">
-    <rect rx="3" ry="3" width="16" height="16" fill="white"/>
+    <rect rx="3" ry="3" width="100%" height="100%" fill="white"/>
   </svg>
 );
 
 export const withIcon = () => (
   <>
-    <Button size="x-small" icon={smallIcon}>X-Small Icon After</Button>
-    <Button size="x-small" icon={smallIcon} iconPosition="before">X-Small Icon Before</Button>
+    <Button size="x-small" icon={icon}>X-Small Icon After</Button>
+    <Button size="x-small" icon={icon} iconPosition="before">X-Small Icon Before</Button>
     <br />
-    <Button size="small" icon={smallIcon}>Small Icon After</Button>
-    <Button size="small" icon={smallIcon} iconPosition="before">Small Icon Before</Button>
+    <Button size="small" icon={icon}>Small Icon After</Button>
+    <Button size="small" icon={icon} iconPosition="before">Small Icon Before</Button>
     <br />
-    <Button icon={mediumIcon}>Medium Icon After</Button>
-    <Button icon={mediumIcon} iconPosition="before">Medium Icon Before</Button>
+    <Button icon={icon}>Medium Icon After</Button>
+    <Button icon={icon} iconPosition="before">Medium Icon Before</Button>
     <br />
-    <Button size="large" icon={mediumIcon}>Large Icon After</Button>
-    <Button size="large" icon={mediumIcon} iconPosition="before">Large Icon Before</Button>
+    <Button size="large" icon={icon}>Large Icon After</Button>
+    <Button size="large" icon={icon} iconPosition="before">Large Icon Before</Button>
     <br />
-    <Button size="x-large" icon={largeIcon}>X-Large Icon After</Button>
-    <Button size="x-large" icon={largeIcon} iconPosition="before">X-Large Icon Before</Button>
+    <Button size="x-large" icon={icon}>X-Large Icon After</Button>
+    <Button size="x-large" icon={icon} iconPosition="before">X-Large Icon Before</Button>
     <br />
   </>
 );
