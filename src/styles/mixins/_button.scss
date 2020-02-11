@@ -110,6 +110,15 @@
 
   line-height: $line-height-xs;
 
+  display: inline-flex;
+  align-items: center;
+  vertical-align: middle;
+
+  // This adds a margin to a second element inside button, which can be an icon or text
+  & *:nth-child(2) {
+    margin-left: $spacing-2x;
+  }
+
   &:focus {
     outline: none;
   }
@@ -158,7 +167,19 @@
     x-large: 0 $spacing-8x,
   );
 
+  $iconSpacings: (
+    x-small: $spacing-1x,
+    small: $spacing-1x,
+    medium: $spacing-2x,
+    large: $spacing-2x,
+    x-large: $spacing-2x,
+  );
+
   font-size: #{map-get($font-sizes, $size)};
   height: #{map-get($heights, $size)};
   padding: #{map-get($paddings, $size)};
+
+  & *:nth-child(2) {
+    margin-left: #{map-get($iconSpacings, $size)};
+  }
 }

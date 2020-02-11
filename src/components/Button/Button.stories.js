@@ -38,8 +38,42 @@ export const sizes = () => (
   </>
 );
 
+const largeIcon = (
+  <svg width="24" height="24">
+    <rect rx="3" ry="3" width="24" height="24" fill="white"/>
+  </svg>
+);
+
+const mediumIcon = (
+  <svg width="20" height="20">
+    <rect rx="3" ry="3" width="20" height="20" fill="white"/>
+  </svg>
+);
+
+const smallIcon = (
+  <svg width="16" height="16">
+    <rect rx="3" ry="3" width="16" height="16" fill="white"/>
+  </svg>
+);
+
 export const withIcon = () => (
-  "To do"
+  <>
+    <Button size="x-small" icon={smallIcon}>X-Small Icon After</Button>
+    <Button size="x-small" icon={smallIcon} iconPosition="before">X-Small Icon Before</Button>
+    <br />
+    <Button size="small" icon={smallIcon}>Small Icon After</Button>
+    <Button size="small" icon={smallIcon} iconPosition="before">Small Icon Before</Button>
+    <br />
+    <Button icon={mediumIcon}>Medium Icon After</Button>
+    <Button icon={mediumIcon} iconPosition="before">Medium Icon Before</Button>
+    <br />
+    <Button size="large" icon={mediumIcon}>Large Icon After</Button>
+    <Button size="large" icon={mediumIcon} iconPosition="before">Large Icon Before</Button>
+    <br />
+    <Button size="x-large" icon={largeIcon}>X-Large Icon After</Button>
+    <Button size="x-large" icon={largeIcon} iconPosition="before">X-Large Icon Before</Button>
+    <br />
+  </>
 );
 
 export const iconOnly = () => (

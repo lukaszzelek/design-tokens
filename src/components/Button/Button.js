@@ -4,7 +4,15 @@ import classNames from 'classnames';
 
 import "./Button.scss";
 
-const Button = ({ variant = 'primary', size = 'medium', className, children, ...props }) => {
+const Button = ({
+  variant = 'primary',
+  size = 'medium',
+  icon,
+  iconPosition = 'after',
+  className,
+  children,
+  ...props
+}) => {
   const buttonClasses = classNames(
     "btn",
     {
@@ -16,20 +24,28 @@ const Button = ({ variant = 'primary', size = 'medium', className, children, ...
     className
   );
 
+  const iconBefore = icon && iconPosition === 'before' ? icon : null;
+  const iconAfter = icon && iconPosition === 'after' ? icon : null;
+
   return (
     <button className={buttonClasses} {...props}>
-      {children}
+      {iconBefore}
+      <span>{children}</span>
+      {iconAfter}
     </button>
 )};
 
 Button.defaultProps = {
   variant: 'primary',
-  size: 'medium'
+  size: 'medium',
+  iconPosition: 'after'
 }
 
 Button.propTypes = {
-  variant: PropTypes.string,
-  size: PropTypes.string,
+  variant: PropTypes.oneOf(['primary', 'secondary', 'tertiary', 'subtle', 'danger']),
+  size: PropTypes.oneOf(['x-small', 'small', 'medium', 'large', 'x-large']),
+  icon: PropTypes.node,
+  iconPosition: PropTypes.oneOf(['after', 'before']),
   className: PropTypes.string,
   children: PropTypes.node
 }
